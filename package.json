@@ -5,6 +5,7 @@
   "author": "Patrick Connolly <patrick.c.connolly@gmail.com>",
   "description": "A helpful robot for EDGI",
   "dependencies": {
+    "coffee-script": "^1.12.5",
     "hubot": "^2.19.0",
     "hubot-factoids": "^1.1.0",
     "hubot-help": "^0.2.0",
