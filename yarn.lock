@@ -544,6 +544,12 @@ hubot-factoids@^1.1.0:
   dependencies:
     coffee-script "~1.6"
 
+"hubot-factoids@github:patcon/hubot-factoids#patch-1":
+  version "1.0.0"
+  resolved "https://codeload.github.com/patcon/hubot-factoids/tar.gz/0637a28aa542df121b3f69cfcd25af46e641fb99"
+  dependencies:
+    coffee-script "~1.6"
+
 hubot-help@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/hubot-help/-/hubot-help-0.2.0.tgz#375b0fd7a1eafb2a71cf2e548bcb226bf7e66642"

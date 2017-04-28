@@ -7,7 +7,7 @@
   "dependencies": {
     "coffee-script": "^1.12.5",
     "hubot": "^2.19.0",
-    "hubot-factoids": "^1.1.0",
+    "hubot-factoids": "github:patcon/hubot-factoids#patch-1",
     "hubot-help": "^0.2.0",
     "hubot-heroku-keepalive": "^1.0.2",
     "hubot-redis-brain": "0.0.3",
