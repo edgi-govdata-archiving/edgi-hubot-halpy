@@ -1,4 +1,5 @@
 [
+  "hubot-factoids",
   "hubot-help",
   "hubot-heroku-keepalive",
   "hubot-redis-brain"
