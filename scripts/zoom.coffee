@@ -10,7 +10,7 @@
 #   HUBOT_ZOOM_HOST_ID - id of user attached to account
 #
 # Commands:
-#   hubot zoom me now [<topic>] - start a zoom meeting and return the meeting link
+#   hubot zoom me [rec] now [<topic>] - start a zoom meeting and return the meeting link
 #
 # Author:
 #   Gad Berger
@@ -18,13 +18,15 @@
 zoom_meeting_create = "https://api.zoom.us/v1/meeting/create"
 
 zoomHostId = process.env.HUBOT_ZOOM_HOST_ID
+landing_disclaimer_url = "https://edgi-video-call-landing-page.herokuapp.com/"
 
 module.exports = (robot) ->
 
-  robot.respond /zoom me now(.+)?$/i, (msg) ->
+  robot.respond /zoom me( \w+)? now(.+)?$/i, (msg) ->
+    is_recorded = /rec/i.test msg.match[1]
     username = msg.message.user.name
     zoom_host_id = zoomHostId
-    topic = msg.match[1]
+    topic = msg.match[2]
 
     # according to zoom support, only scheduled and recurring
     # meetings can have the join before host option set to true
@@ -40,6 +42,8 @@ module.exports = (robot) ->
     params.type = 2
     params.option_start_type = "video"
     params.option_jbh = true
+    if is_recorded
+      params.option_auto_record_type = "cloud"
 
     params.topic = topic || "Insta-meeting via chatbot"
 
@@ -54,7 +58,10 @@ module.exports = (robot) ->
               if json_body.error?
                 msg.send "zoom error: #{json_body.error.message}"
               else
-                msg.send "#{username} started a zoom session: #{json_body.join_url}"
+                descriptor = if is_recorded then "recorded" else ""
+                join_url = json_body.join_url
+                join_url = if is_recorded then landing_disclaimer_url + join_url
+                msg.send "#{username} started a #{descriptor} zoom session: #{join_url}"
             else
               msg.send "zoom? more like doom! there was a problem sending the request :("
     catch e then msg.send e
