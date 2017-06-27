@@ -13,7 +13,7 @@
     "hubot-redis-brain": "0.0.3",
     "hubot-rss-reader": "^0.8.3",
     "hubot-scripts": "^2.17.2",
-    "hubot-slack": "^4.3.4"
+    "hubot-slack": "github:patcon/hubot-slack#dm-prefix"
   },
   "engines": {
     "node": "4.x"
