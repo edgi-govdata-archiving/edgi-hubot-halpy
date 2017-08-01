@@ -60,7 +60,7 @@ module.exports = (robot) ->
               else
                 descriptor = if is_recorded then "recorded" else ""
                 join_url = json_body.join_url
-                join_url = if is_recorded then landing_disclaimer_url + join_url
+                join_url = if is_recorded then landing_disclaimer_url + join_url else join_url
                 msg.send "#{username} started a #{descriptor} zoom session: #{join_url}"
             else
               msg.send "zoom? more like doom! there was a problem sending the request :("
