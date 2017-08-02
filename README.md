@@ -216,6 +216,6 @@ you're having issues.
 ## Notes
 
 * `master` branch is auto-deployed to Heroku.
-* We use the [Probot: Configurer
-  plugin](https://github.com/apps/configurer) to allow repo settings via
-  pull request using [`.github/config.yml`](.github/config.yml).
+* We use the [Probot: Settings
+  plugin](https://github.com/apps/settings) to allow repo settings via
+  pull request using [`.github/settings.yml`](.github/settings.yml).
