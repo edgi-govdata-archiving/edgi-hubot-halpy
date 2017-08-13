@@ -1,0 +1,5 @@
+repository:
+  name: edgi-hubot
+  description: Heroku-backed chatbot-friend who lives in EDGI Slack.
+  homepage: https://edgi-hubot.herokuapp.com/
+  default_branch: master

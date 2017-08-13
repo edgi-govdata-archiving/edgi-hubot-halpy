@@ -212,3 +212,10 @@ Add the subdomain hubot should connect to. If you web URL looks like
 
 You may want to get comfortable with `heroku logs` and `heroku restart` if
 you're having issues.
+
+## Notes
+
+* `master` branch is auto-deployed to Heroku.
+* We use the [Probot: Settings
+  plugin](https://github.com/apps/settings) to allow repo settings via
+  pull request using [`.github/settings.yml`](.github/settings.yml).
