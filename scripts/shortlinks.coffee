@@ -1,3 +1,18 @@
+# Description:
+#   hubot Rebrandly link shortening integration!
+#
+# Dependencies:
+#   request-promise
+#
+# Configuration:
+#   REBRANDLY_API_KEY
+#
+# Commands:
+#   hubot shortlink set <name> <url> - update an existing shortlink (no new shortlinks yet)
+#
+# Author:
+#   @patcon
+
 rp = require 'request-promise'
 
 module.exports = (robot) ->
