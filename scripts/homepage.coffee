@@ -13,15 +13,15 @@
 # Author:
 #   patcon
 
+fs = require 'fs'
+mustache = require 'mustache'
+
 module.exports = (robot) ->
   robot.router.get '/', (req, res) ->
-    output = "<html>"
-    output += "<head>"
-    output += "<title>#{robot.name}</title>"
-    output += "</head>"
-    output += "<body>"
-    output += "<h1>Hello, human!</h1>"
-    output += "<div>If you're reading this then I, #{robot.name}, am awake and <a href='https://imgur.com/gjOZUwL'>now showing as online (green) in Slack.</a></div>"
-    output += "</body>"
-    output += "</html>"
+    tpl_file = 'templates/homepage.html.mustache'
+    view =
+      robot: robot
+
+    tpl = fs.readFileSync tpl_file, 'utf8'
+    output = mustache.render tpl, view
     res.send output
