@@ -13,8 +13,8 @@
     "hubot-redis-brain": "0.0.3",
     "hubot-rss-reader": "^0.8.3",
     "hubot-scripts": "^2.17.2",
-    "mustache": "^2.3.0",
-    "hubot-slack": "github:slackapi/hubot-slack#master"
+    "hubot-slack": "^4.4.0",
+    "mustache": "^2.3.0"
   },
   "scripts": {
     "start": "PORT=8585 ./bin/hubot"
