@@ -14,7 +14,7 @@
     "hubot-rss-reader": "^0.8.3",
     "hubot-scripts": "^2.17.2",
     "mustache": "^2.3.0",
-    "hubot-slack": "github:slackapi/hubot-slack#e9f2f0882d66c054ef386b43df6b1e8949508fec"
+    "hubot-slack": "github:slackapi/hubot-slack#master"
   },
   "scripts": {
     "start": "PORT=8585 ./bin/hubot"
