@@ -21,7 +21,7 @@ platform][heroku] and lives here:
 
 ## Deployment
 
-- Halpy is auto-deployed to Heroku from `master` branch. (See: [pHeroku Docs][autodeploy-docs])
+- Halpy is auto-deployed to Heroku from `master` branch. (See: [Heroku Docs][autodeploy-docs])
 
    [autodeploy-docs]: https://devcenter.heroku.com/articles/github-integration#automatic-deploys
 
