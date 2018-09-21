@@ -1,30 +1,29 @@
 {
-  "name": "edgi-hubot-halpy",
+  "name": "halpy2",
   "version": "0.0.0",
   "private": true,
-  "author": "Patrick Connolly <patrick.c.connolly@gmail.com>",
-  "description": "A helpful robot for EDGI",
+  "author": "Matt Price <matt.price@utoronto.ca>",
+  "description": "Replacement for halpy using hubot3 framework",
   "dependencies": {
-    "coffee-script": "^1.12.5",
-    "hubot": "^2.19",
-    "fresh": "^0.5.2",
-    "debug": "^2.6.9",
-    "https-proxy-agent": "^2.2.0",
-    "mime": "^1.4.1",
-    "sshpk": "^1.13.2",
-    "hubot-factoids": "github:patcon/hubot-factoids#patch-1",
-    "hubot-help": "^0.2.0",
-    "hubot-heroku-keepalive": "^1.0.2",
-    "hubot-redis-brain": "0.0.3",
-    "hubot-rss-reader": "^0.8.3",
+    "hubot": "^3.1.1",
+    "hubot-diagnostics": "^1.0.0",
+    "hubot-google-images": "^0.2.7",
+    "hubot-google-translate": "^0.2.1",
+    "hubot-help": "^1.0.1",
+    "hubot-heroku-keepalive": "^1.0.3",
+    "hubot-maps": "0.0.3",
+    "hubot-pugme": "^0.1.1",
+    "hubot-redis-brain": "^1.0.0",
+    "hubot-rules": "^1.0.0",
     "hubot-scripts": "^2.17.2",
-    "hubot-slack": "^4.4.0",
-    "mustache": "^2.3.0"
-  },
-  "scripts": {
-    "start": "PORT=8585 ./bin/hubot"
+    "hubot-shipit": "^0.2.1",
+    "hubot-slack": "electricwarr/hubot-slack"
   },
   "engines": {
-    "node": "4.x"
+    "node": "0.10.x"
+  },
+  "devDependencies": {
+    "chrono-node": "^1.3.5",
+    "hubot-reload-scripts": "^0.1.4"
   }
 }
