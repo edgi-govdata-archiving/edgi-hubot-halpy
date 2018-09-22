@@ -17,13 +17,19 @@
     "hubot-rules": "^1.0.0",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
-    "hubot-slack": "electricwarr/hubot-slack"
+    "hubot-slack": "electricwarr/hubot-slack",
+    "jsonwebtoken": "^8.3.0",
+    "moment": "^2.22.2",
+    "request-promise": "^4.2.2",
+    "zoomus": "^0.1.2"
   },
   "engines": {
     "node": "0.10.x"
   },
   "devDependencies": {
     "chrono-node": "^1.3.5",
+    "dotenv": "^6.0.0",
+    "hubot-reload": "0.0.2",
     "hubot-reload-scripts": "^0.1.4"
   }
 }
