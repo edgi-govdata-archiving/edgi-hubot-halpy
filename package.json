@@ -5,10 +5,8 @@
   "author": "Matt Price <matt.price@utoronto.ca>",
   "description": "Replacement for halpy using hubot3 framework",
   "dependencies": {
+    "chrono-node": "^1.3.5",
     "hubot": "^3.1.1",
-    "hubot-diagnostics": "^1.0.0",
-    "hubot-google-images": "^0.2.7",
-    "hubot-google-translate": "^0.2.1",
     "hubot-help": "^1.0.1",
     "hubot-heroku-keepalive": "^1.0.3",
     "hubot-maps": "0.0.3",
@@ -27,7 +25,6 @@
     "node": "0.10.x"
   },
   "devDependencies": {
-    "chrono-node": "^1.3.5",
     "dotenv": "^6.0.0",
     "hubot-reload": "0.0.2",
     "hubot-reload-scripts": "^0.1.4"

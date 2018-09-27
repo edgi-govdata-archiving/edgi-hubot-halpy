@@ -13,7 +13,7 @@ platform][heroku] and lives here:
 
 ## Table of Contents
 
-- [Usale](#Usage)
+- [Usage](#Usage)
 - [Deployment](#deployment)
 - [Running Halpy Locally](#running-halpy-locally)
 - [Configuration](#configuration)
@@ -21,10 +21,10 @@ platform][heroku] and lives here:
 - [Notes](#notes)
 
 ## Usage
-Halpy, like Hubot, understnads commands defined in indiivdual scripts. Thos scripts can be written by end users (like EDGI) or provided by external packages. Commands are issued by a user in a Slack channel who types `@halpy COMMANDNAME OPTIONS`.  So far we mostly use the commands we have written ourselves:
+Halpy, like Hubot, understands commands defined in indiivdual scripts. Those scripts can be written by end users (like EDGI) or provided by external packages. Commands are issued by a user in a Slack channel who types `@halpy COMMANDNAME OPTIONS`.  So far we mostly use the commands we have written ourselves:
 
 - `scripts/zoom-scratch.coffee` provides several new commands for interacting with the Zoom video conferencing software. For the time being they are named `zoom test` instead of just `zoom`, in order to distinguish them from previous generations of the commands.  The new commands are: 
-  - `zoom test me now -t Meeting Topic` or `zoom test me [Date Descriptor] [for Time Descriptor] -t Meeting Topic`. Like the old `zoom me now` command, these commands create a new meeting, and recording can be turned on with either `-r` or `record` anywhere in the command. The exciting advance is that we can now provide a date for a future meeting, and we can also set the length of scheduled meetings with a time descriptor. Date descriptions are quite flexible, and take a vairety of forms such as "next Friday at 15:00", "September 15 at 3:00PM EDT," or "2019-09-15". ISO timestamps are also accepted. The time descriptor should take the form "for n minutes" or "for n hours", i.e., "for 120 minute" or "for 2 hours". The length `n` needs to be an integer so for 1.5 hr meetings please use `90 minutes` instead.
+  - `zoom test me now -t Meeting Topic` or `zoom test me [Date Descriptor] [for Time Descriptor] -t Meeting Topic`. Like the old `zoom me now` command, these commands create a new meeting, and recording can be turned on with either `-r` or `record` anywhere in the command. The exciting advance is that we can now provide a date for a future meeting, and we can also set the length of scheduled meetings with a time descriptor. Date descriptions are quite flexible, and take a vairety of forms such as "next Friday at 15:00", "September 15 at 3:00PM EDT," or "2019-09-15". ISO timestamps are also accepted. The time descriptor should take the form "for n minutes" or "for n hours", i.e., "for 120 minute" or "for 2 hours".
   - `zoom ls` and `zoom list` both return a list of upcoming zoom meetings along with their join links.  By defualt it lists meetings for the next 7 days, but this can be changed by providing a number anywhere after the command, e.g. `zoom ls next 14 days` or `zoom list 14`, which wil lboth list all upcoming meetings for the next 14 days.
   - A scond set of commands is also under development. These commands all start with `zoom report` and are aimed at producing recurring reminders for monthly reports.  We hope to use this work to allow for other recurring reminders; we might also take this opportunity to make more streamlined use of our slack channels, e.g. by creating an ew hcannel for reports only, and alerting select other channels when a working group report gets handed in.
     - In the current implementation, the report text is set within a halpy script. THe assumption is that someone will initiate a monthly report reminder and set the @-mentions to be used for the current month.  The initial reminder will go out on a set date -- most likely the 25th of them onth -- and subsequent reminders will be issued every following day until the report has been submitted. Users who hav ealready submitted their reports, or who have been added to the listo f @-mentions in error, can turn off subsequent messages by clicking a reaction emoji at the bottom of original message. Most of this is unimplemented and none of it has been user-tested!
@@ -38,7 +38,7 @@ Halpy, like Hubot, understnads commands defined in indiivdual scripts. Thos scri
 
 ## Running Halpy Locally
 
-Halpy uses the `dotenv` package to facilitate local development. Make sure to run `npm install -d` to enstal lthe development dependencies, and then copy [sample.env](./sample.env) to **.env** and replace the dummy values with the real ones, which you can find on Halpy's Heroku deployment page.  It's recommended *not* to use Halpy's slack token, but instead to use the token associated with `halpy-ng`, which is a Slack integratin we set up for bot development purposes. If you need help finding these values, please ask in Slack.
+Halpy uses the `dotenv` package to facilitate local development. Make sure to run `npm install -d` to install the development dependencies, and then copy [sample.env](./sample.env) to **.env** and replace the dummy values with the real ones, which you can find on Halpy's Heroku deployment page.  It's recommended *not* to use Halpy's slack token, but instead to use the token associated with `halpy-ng`, which is a Slack integration we set up for bot development purposes. If you need help finding these values, please ask in Slack.
 
 You can start Halpy locally by running this in your terminal:
 
