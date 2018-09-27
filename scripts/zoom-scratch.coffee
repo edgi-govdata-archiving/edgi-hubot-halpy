@@ -26,7 +26,7 @@ cmd_name = "zoom-test"
 recordedRE = /\s(recorded|-r)/i
 topicRE = /-t (.*)( -)?/i
 
-# use dotenv i na dev env
+# use dotenv in a dev env
 if  process.env.NODE_ENV isnt 'production'
   dotenv = require('dotenv')
   dotenv.load()
@@ -81,7 +81,7 @@ parseZoom  = (instructions) ->
     if is_recorded
       remainder = quickCut(remainder, is_recorded.index, is_recorded[0].length)
 
-    dstring = remainder.match /.*for (\d+) (minutes|hour[s]?)/i
+    dstring = remainder.match /.*for ([\d\.]+) (minutes|hour[s]?)/i
     if dstring
       # console.log fullObj dstring
       remainder = quickCut(remainder, dstring.index, dstring[0].length)
