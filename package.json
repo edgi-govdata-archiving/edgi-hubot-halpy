@@ -6,20 +6,20 @@
   "description": "A helpful robot for EDGI",
   "dependencies": {
     "coffee-script": "^1.12.5",
-    "hubot": "^2.19",
-    "fresh": "^0.5.2",
     "debug": "^2.6.9",
+    "fresh": "^0.5.2",
     "https-proxy-agent": "^2.2.0",
-    "mime": "^1.4.1",
-    "sshpk": "^1.13.2",
+    "hubot": "^2.19",
     "hubot-factoids": "github:patcon/hubot-factoids#patch-1",
     "hubot-help": "^0.2.0",
     "hubot-heroku-keepalive": "^1.0.2",
     "hubot-redis-brain": "0.0.3",
     "hubot-rss-reader": "^0.8.3",
     "hubot-scripts": "^2.17.2",
-    "hubot-slack": "^4.4.0",
-    "mustache": "^2.3.0"
+    "hubot-slack": "^4.6.0",
+    "mime": "^1.4.1",
+    "mustache": "^2.3.0",
+    "sshpk": "^1.13.2"
   },
   "scripts": {
     "start": "PORT=8585 ./bin/hubot"
