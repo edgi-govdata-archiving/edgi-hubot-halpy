@@ -25,6 +25,6 @@
     "start": "PORT=8585 ./bin/hubot"
   },
   "engines": {
-    "node": "4.x"
+    "node": "10.x"
   }
 }
