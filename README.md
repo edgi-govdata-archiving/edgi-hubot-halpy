@@ -2,6 +2,8 @@
 
 # Halpy
 
+**NOTE: Halpy is not actively maintained. It needs major updates to Hubot and other dependencies, and EDGI members have not had time to keep up with it. If you’re interested in helping out by maintaining Halpy, let us know on the #tools_talk channel of the EDGI Slack.**
+
 Halpy is a chat bot used by the Environmental Data & Governance
 Initiative (EDGI) to assist us in our Slack chat.
 
